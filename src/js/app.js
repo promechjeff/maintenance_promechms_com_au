@@ -33,9 +33,27 @@ angular.module('promechMaintenanceApp', [
                 }
             })
             .state('dashboard.overview', {
-                url: 'overview/',
+                url: 'overview',
                 templateUrl: 'views/dashboard/dashboard.overview.html',
                 controller: 'DashboardOverviewCtrl',
+                data: {
+                    requiresLogin: true,
+                    authorizedRoles: []
+                }
+            })
+            .state('maintenance', {
+                url: '/maintenance',
+                templateUrl: 'views/maintenance/maintenance.html',
+                controller: 'MaintenanceCtrl',
+                data: {
+                    requiresLogin: true,
+                    authorizedRoles: []
+                }
+            })
+            .state('maintenance.show', {
+                url: '/:maintenanceUID',
+                templateUrl: 'views/maintenance/maintenance.show.html',
+                controller: 'MaintenanceShowCtrl',
                 data: {
                     requiresLogin: true,
                     authorizedRoles: []

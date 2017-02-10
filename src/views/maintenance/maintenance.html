@@ -1,0 +1,48 @@
+<div class="row" ui-view>
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Maintenance Reporting</h4>
+				<div class="row">
+					<div class="col-sm-6 col-md-8">
+						<p>Here is where you can start new maintenance report, open existing/saved reports or send submitted reports via email as required. Use the search bar to find projects by Job number, project name or technician</p>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+							<input type="text" class="form-control" ng-model="self.filter" placeholder="Search maintenance">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Saved Reports</h4>
+				<p>Below is a list of mainteneace reports which have been saved and not yet submitted. A reminder email will be sent at the end of each day if there are still reports in this section</p>
+			</div>
+			<table class="table">
+				<tr>
+					<th>Job ID</th>
+					<th>Project</th>
+					<th>Technician</th>
+					<th>Last Edited</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr ng-repeat="project in projects | filter:self.filter">
+					<td>{{project.jobID}}</td>
+					<td>{{project.name}}</td>
+					<td>{{project.technician.name}}</td>
+					<td>{{project.lastEdited | date}}</td>
+					<td class="text-right">
+						<a class="btn btn-default btn-xs">Continue</a>
+						<a class="btn btn-default btn-xs">Delete</a>
+					</td>
+				</tr>
+				<tr ng-show="(projects | filter:self.filter).length == 0"><td colspan="5"><center><em>There are no Saved Report<span ng-show="self.filter"> containing '{{self.filter}}'</em></span></center><td></tr>
+			</table>
+		</div>
+	</div>
+</div>

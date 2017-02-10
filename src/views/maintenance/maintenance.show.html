@@ -1,0 +1,141 @@
+<div class="row" ui-view>
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Job Information</h4>
+				<div class="row">
+					<div class="col-sm-4"><strong>Job Number:</strong>&nbsp;{{maintenance.project.jobID}}</div>
+					<div class="col-sm-8"><strong>Project Name:</strong>&nbsp;{{maintenance.project.name}}</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12"><strong>Address:</strong>&nbsp;{{maintenance.project.address.pretty}}</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4"><strong>Builder:</strong>&nbsp;{{maintenance.project.builder.name}}</div>
+					<div class="col-sm-4"><strong>Consultant:</strong>&nbsp;{{maintenance.project.consultant.mechanical.name}}</div>
+					<div class="col-sm-4"><strong>Architect:</strong>&nbsp;{{maintenance.project.architect.name}}</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Drawings and Comments</h4>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="thumbnail">
+							<div class="row">
+								<div class="col-sm-3"><img src="assets/images/adobe-pdf-icon.svg" alt="PDF File" class="img-responsive" /></div>
+								<div class="col-sm-9">
+									<strong>M-01 - Legend, Detail & Schedules</strong>
+									<p>Rev B, 19/06/15, Construction Issue</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="thumbnail">
+							<div class="row">
+								<div class="col-sm-3"><img src="assets/images/adobe-pdf-icon.svg" alt="PDF File" class="img-responsive" /></div>
+								<div class="col-sm-9">
+									<strong>M-02 - Ground Floor Layout</strong>
+									<p>Rev B, 19/06/15, Construction Issue</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="thumbnail">
+							<div class="row">
+								<div class="col-sm-3"><img src="assets/images/adobe-pdf-icon.svg" alt="PDF File" class="img-responsive" /></div>
+								<div class="col-sm-9">
+									<strong>M-03 - Roof Level Layout</strong>
+									<p>Rev B, 19/06/15, Construction Issue</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Maintenance Visit Details</h4>
+				
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Add Equipment Checklists</h4>
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Select a template from the drop down list on the right and click 'Add' to import a template for a new piece/s of equipment</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-group">
+							<select class="form-control" ng-options="template as template.name for template in templateItems" ng-model="self.selectedTemplate">
+								<option value="" selected disabled>Please select a template</option>
+							</select>
+							<div class="input-group-btn">
+								<button type="button" ng-click="addTemplate(self.selectedTemplate)" class="btn btn-default">Add</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default" ng-repeat="item in maintenance.items">
+			<div class="panel-body">
+				<h4>{{item.title}}</h4>
+				<p>{{item.description}}</p>
+				<textarea rows="2" class="form-control" placeholder="Units checked (eg {{item.exampleUnits}})"></textarea>
+			</div>
+			<table class="table">
+				<tr>
+					<th class="text-center">Point Number</th>
+					<th>Check Point</th>
+					<th>Remarks</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr ng-repeat="point in item.points">
+					<td class="text-center">{{point.number}}</td>
+					<td>{{point.description}}</td>
+					<td><input type="text" class="form-control" ng-model="point.remarks"></td>
+					<td class="text-right">
+						<div class="btn-group">
+							<button type="button" class="btn" ng-repeat="option in point.options" ng-click="point.checked=option.id" ng-class="{'btn-success':point.checked==option.id,'btn-default':point.checked!=option.id}">{{option.name}}</button>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Gerenal Comments</h4>
+				<textarea rows="10" class="form-control" placeholder="Enter any other comments relating to the maintenance inspection"></textarea>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<button class="btn btn-danger btn-lg btn-block"><i class="fa fa-trash-o"></i>&nbsp;Delete</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<button class="btn btn-primary btn-lg btn-block"><i class="fa fa-floppy-o"></i>&nbsp;Save</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<button class="btn btn-success btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Finalise and Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
