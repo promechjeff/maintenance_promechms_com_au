@@ -33,7 +33,7 @@ angular.module('promechMaintenanceApp')
                 surname: 'User',
                 email: 'test.user@email.com'
             };
-            store.set(jwtName, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SUQiOiIxIiwiZmlyc3ROYW1lIjoiVGVzdCIsInN1cm5hbWUiOiJVc2VyIiwiZW1haWwiOiJ0ZXN0LnVzZXJAZW1haWwuY29tIiwiZXhwIjoxNDg2NzA0NDc4fQ.7jNhq0kvrgofAUtxDg3tnHRMXCa4y9rzBYXgKv1pz-Q');
+            store.set(jwtName, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SUQiOiIxIiwiZmlyc3ROYW1lIjoiVGVzdCIsInN1cm5hbWUiOiJVc2VyIiwiZW1haWwiOiJ0ZXN0LnVzZXJAZW1haWwuY29tIiwiZXhwIjoxNTg2NzA0NDc4fQ.4hFbub29vBX41XjL4Fgq6bef-5jsDBG_Y51o18qs56k');
             $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
             return true;
 		};

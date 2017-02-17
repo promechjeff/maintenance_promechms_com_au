@@ -57,69 +57,87 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'GEF-1, KEF-2, All TEF-X on Ground',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'Start fan and observer operation',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'Yes'
+                        icon: 'fa-check',
+                        color: 'success',
                     }, {
                         id: 2,
-                        name: 'No'
+                        icon: 'fa-exclamation-triangle',
+                        color: 'warning',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'Check bearings for noise or vibration',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'Yes'
+                        icon: 'fa-check',
+                        color: 'success',
                     }, {
                         id: 2,
-                        name: 'No'
+                        icon: 'fa-exclamation-triangle',
+                        color: 'warning',
                     }, ]
                 }, {
                     number: '3',
+                    isCustom: false,
                     description: 'Check fan blade condition',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'Yes'
+                        icon: 'fa-check',
+                        color: 'success',
                     }, {
                         id: 2,
-                        name: 'No'
+                        icon: 'fa-exclamation-triangle',
+                        color: 'warning',
                     }, ]
                 }, {
                     number: '4',
+                    isCustom: false,
                     description: 'Check air supply and duct for debris',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'Yes'
+                        icon: 'fa-check',
+                        color: 'success',
                     }, {
                         id: 2,
-                        name: 'No'
+                        icon: 'fa-exclamation-triangle',
+                        color: 'warning',
                     }, ]
                 }, {
                     number: '6',
+                    isCustom: false,
                     description: 'Check electrical wiring for any damage',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'Yes'
+                        icon: 'fa-check',
+                        color: 'success',
                     }, {
                         id: 2,
-                        name: 'No'
+                        icon: 'fa-exclamation-triangle',
+                        color: 'warning',
                     }, ]
                 }, {
                     number: '7',
+                    isCustom: false,
                     description: 'Check and grease motor and fan blade',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'Yes'
+                        icon: 'fa-check',
+                        color: 'success',
                     }, {
                         id: 2,
-                        name: 'No'
+                        icon: 'fa-exclamation-triangle',
+                        color: 'warning',
                     }, ]
                 }, ],
             }, ]
@@ -134,25 +152,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -165,25 +189,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -196,25 +226,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -227,25 +263,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -258,25 +300,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -289,25 +337,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -320,25 +374,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -351,25 +411,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             },
@@ -382,25 +448,31 @@ angular.module('promechMaintenanceApp')
                 exampleUnits: 'AHU-1, All AHU\'s on Roof',
                 points: [{
                     number: '1',
+                    isCustom: false,
                     description: 'It looks all sweet from the outside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, {
                     number: '2',
+                    isCustom: false,
                     description: 'It\'s still shiney on the inside',
                     checked: null,
                     options: [{
                         id: 1,
-                        name: 'O.K.'
+                        color: 'success',
+                        icon: 'fa-check',
                     }, {
                         id: 2,
-                        name: 'Not OK'
+                        color: 'warning',
+                        icon: 'fa-exclamation-triangle',
                     }, ]
                 }, ],
             }
@@ -410,6 +482,22 @@ angular.module('promechMaintenanceApp')
             if (selectedTemplate) {
                 $scope.maintenance.items.push(selectedTemplate.item)
             }
+        }
+
+        $scope.addNewPoint = function (item) {
+            item.points.push({
+                isCustom: true,
+                checked: null,
+                options: [{
+                    id: 1,
+                    icon: 'fa-check',
+                    color: 'success',
+                }, {
+                    id: 2,
+                    color: 'warning',
+                    icon: 'fa-exclamation-triangle',
+                }]
+            });
         }
 
     }

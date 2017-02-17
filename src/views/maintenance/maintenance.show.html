@@ -97,14 +97,42 @@
 					<th>&nbsp;</th>
 				</tr>
 				<tr ng-repeat="point in item.points">
-					<td class="text-center">{{point.number}}</td>
-					<td>{{point.description}}</td>
+					<td class="text-center">
+						<span ng-if="point.isCustom">
+								<div class="input-group">
+									<div class="input-group-btn">
+										<button class="btn btn-default"><i class="fa fa-trash-o"></i></button>		
+									</div>
+									<input type="text" class="form-control" ng-model="point.number" style="max-width: 100px">
+								</div>
+						</span>
+						<span ng-if="!point.isCustom">
+							{{point.number}}
+						</span>
+					</td>
+					<td>
+						<span ng-if="point.isCustom">
+							<input type="text" class="form-control" ng-model="point.description">
+						</span>
+						<span ng-if="!point.isCustom">
+							{{point.description}}
+						</span>
+					</td>
 					<td><input type="text" class="form-control" ng-model="point.remarks"></td>
 					<td class="text-right">
 						<div class="btn-group">
-							<button type="button" class="btn" ng-repeat="option in point.options" ng-click="point.checked=option.id" ng-class="{'btn-success':point.checked==option.id,'btn-default':point.checked!=option.id}">{{option.name}}</button>
+							<button type="button" class="btn" ng-repeat="option in point.options" ng-click="point.checked=option.id" ng-class="(point.checked==option.id) ? 'btn-'+option.color : 'btn-default'">
+								<span ng-if="option.icon"><i class="fa" ng-class="option.icon"></i></span>
+								<span ng-if="option.icon && option.name">&nbsp;</span>
+								<span ng-if="option.name">{{option.name}}</span>
+							</button>
 						</div>
 					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><center>
+						<button class="btn btn-default" ng-click="addNewPoint(item)"><i class="fa fa-plus"></i>&nbsp;Add Check Point</button>
+					</center></td>
 				</tr>
 			</table>
 		</div>
